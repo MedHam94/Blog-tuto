@@ -1,19 +1,23 @@
 <div class="author">
-    <div class="author_heading">Hi , I'am Mohammed</div>
-    <div class="author_body">Web Developer</div>
+    <div class="author__heading">Hi , I'am Mohammed</div>
+    <div class="author__body">Web Developer</div>
 </div>
 
 <img src="\img\hero-image.webp" alt="person looking out through windows" class="hero-image" height="528">
 
 <section class="articles">
-    <h2 class="articles_heading">Latest Posts</h2>
+    <h2 class="articles__heading">Latest Posts</h2>
     <ul class="articles-ul">
+        <% data.forEach(post => { %>
+         
+        
         <li>
             <a href="#">
-                <span>Post Title</span>
-                <span class="article-list_date">Date</span>
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
             </a>
         </li>
+        <% }) %>
     </ul>
     <a href="#" class="pagination">&lt; View Older Posts</a>
 </section>
